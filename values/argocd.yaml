@@ -1,0 +1,5 @@
+# Set aws load balancer type to nlb
+server:
+  service:
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: nlb

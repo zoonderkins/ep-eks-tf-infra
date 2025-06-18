@@ -1,0 +1,22 @@
+# Terraform
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+
+# AWS
+.aws
+
+# Kubernetes
+.kube
+
+# Helm
+.helm
+
+# ArgoCD
+.argocd
+
+# AWS CLI
+.aws
+
+# AWS CLI
