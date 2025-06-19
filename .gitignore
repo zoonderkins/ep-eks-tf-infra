@@ -15,8 +15,3 @@ terraform.tfstate.backup
 
 # ArgoCD
 .argocd
-
-# AWS CLI
-.aws
-
-# AWS CLI

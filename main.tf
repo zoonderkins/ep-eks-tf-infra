@@ -27,7 +27,7 @@ provider "helm" {
 }
 
 locals {
-  cluster_name           = "ep-k8s-101-eks-demo"
+  cluster_name           = "ep-k8s-101-eks-demo-edward"
   region                 = "us-east-1"
   cluster_version        = "1.32"
   cluster_upgrade_policy = "STANDARD" # 集群升級策略
@@ -42,8 +42,8 @@ locals {
   ]
 
   min_size     = 1
-  max_size     = 3
-  desired_size = 2
+  max_size     = 1
+  desired_size = 1
 
   # 作用: 獲取可用區列表
   azs = slice(data.aws_availability_zones.available.names, 0, 2)
@@ -182,7 +182,7 @@ module "vpc" {
   ]
 
   enable_nat_gateway   = true
-  single_nat_gateway   = false
+  single_nat_gateway   = true # 單一 NAT
   enable_dns_hostnames = true
 
   public_subnet_tags = {
